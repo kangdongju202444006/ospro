@@ -10,7 +10,8 @@ import (
 func main() {
 
 	//var i int = 55
-	var f float32 = 4.30 // f:= 4.30
+	var f float32 = 4.30
+	// f:= 4.30 //float64
 	i := 55
 	fmt.Println(reflect.TypeOf(f), reflect.TypeOf(i))
 
