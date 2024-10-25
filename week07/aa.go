@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	// 변수 선언
 	var x int
 
 	// reflect.TypeOf()로 변수의 타입 확인

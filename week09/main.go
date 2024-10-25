@@ -34,6 +34,7 @@ func main() {
 		if answer == guess {
 			fmt.Println("정답입니다!")
 			win = true
+			break
 		} else if answer > guess {
 			fmt.Println("입력하신 수는 정답보다 작은 수 입니다. LOW")
 		} else {
@@ -43,6 +44,6 @@ func main() {
 	if win {
 		fmt.Print("당신이 이겼습니다.")
 	} else {
-		fmt.Print("당신이 졌습니다.")
+		fmt.Printf("당신이 졌습니다.정답은 %d 입니다.", answer)
 	}
 }
