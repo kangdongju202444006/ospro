@@ -1,13 +1,9 @@
-// print prime number between two input number
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"log"
-	"os"
-	"strconv"
-	"strings"
+	"week11/keyboard"
 )
 
 func isPrime(n int) bool {
@@ -28,34 +24,15 @@ func isPrime(n int) bool {
 	return true
 }
 
-func getInteeger() (int, error) {
-
-	r := bufio.NewReader(os.Stdin)
-	a, err := r.ReadString('\n')
-	if err != nil {
-		log.Fatal(err)
-		//log.Fatal(err)
-		return 0, err
-	}
-
-	a = strings.TrimSpace(a)
-	n, err := strconv.Atoi(a)
-	if err != nil {
-		log.Fatal(err)
-		return 0, err
-	}
-	return n, err
-}
-
 func main() {
 	fmt.Print("첫 번째 정수(시작 값) 입력 : ")
-	n1, err := getInteeger()
+	n1, err := keyboard.GetInteger()
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	fmt.Print("두 번째 정수(끝 값) 입력 : ")
-	n2, err := getInteeger()
+	n2, err := keyboard.GetInteger()
 	if err != nil {
 		log.Fatal(err)
 	}
